@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Guessing Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="guess-form">
+        <!-- Form moved above the title -->
+        <form method="post">
+            <input type="number" name="guess" min="1" max="20" placeholder="Enter a number" required>
+            <button type="submit">Submit Guess</button>
+        </form>
+
+        <!-- Heading moved below the form -->
+        <h2>Guess a number between 1 and 20.</h2>
+
+        <p class="remaining-guesses">Remaining Guesses: {{ session['remaining_guesses'] }}</p>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+    <img src="data:image/png;base64,{{ img_base64 }}" alt="Remaining guesses indicator">
+</body>
+</html>
+

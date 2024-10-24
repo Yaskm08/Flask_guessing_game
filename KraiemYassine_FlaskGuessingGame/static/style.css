@@ -1,0 +1,152 @@
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styles for centering and modern background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef2f6;
+    color: #333;
+}
+
+/* Main container for the guessing game */
+.guess-form {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Adding a hover effect to the main game box */
+.guess-form:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Form title styling */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Input field styling */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #d1d8e0;
+    font-size: 1.1em;
+    color: #34495e;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Input field focus styling */
+input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Remaining guesses counter */
+.remaining-guesses {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: #e74c3c;
+}
+
+/* Message styling */
+p.message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+
+/* Green rectangle progress indicator */
+img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.7; /* Slight transparency */
+    transition: height 0.3s ease; /* Smooth transition as it grows */
+    border-radius: 0 0 12px 12px; /* Optional: keep rounded corners */
+}
+
+
+/* Styling for game over result message */
+.game-over {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #e74c3c;
+}
+
+/* Adding a play again link */
+.play-again-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.play-again-link:hover {
+    background-color: #27ae60;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    .guess-form {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="number"], button[type="submit"] {
+        font-size: 1em;
+    }
+
+    p.message {
+        font-size: 1em;
+    }
+}

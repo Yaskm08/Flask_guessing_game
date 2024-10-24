@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gameover.css') }}">
+</head>
+<body class="{{ result }}"> <!-- Dynamically adding "won" or "lost" class to the body -->
+    <div class="game-over-container">
+        {% if result == 'won' %}
+            <p class="game-over-message">🎉 You won! 🎉</p>
+        {% else %}
+            <p class="game-over-message">😢 You lost! 😢</p>
+        {% endif %}
+        <a href="{{ url_for('game') }}" class="play-again-link">Click here to play again</a>
+    </div>
+</body>
+</html>

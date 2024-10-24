@@ -1,0 +1,65 @@
+/* Base styles for the full-screen game over page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;  /* Prevents scrolling */
+}
+
+/* Container for the game over message and play again button */
+.game-over-container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Game over message styles */
+.game-over-message {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;  /* White text for both winning and losing */
+}
+
+/* Play again link styling */
+.play-again-link {
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.play-again-link:hover {
+    background-color: #f1f1f1;
+}
+
+/* Full-screen background for losing state */
+body.lost {
+    background-color: #ff6b6b; /* Vibrant red for losing */
+}
+
+/* Full-screen background for winning state */
+body.won {
+    background-color: #00BFFF; /* Bright blue for winning */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .game-over-message {
+        font-size: 2.5em;
+    }
+
+    .play-again-link {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
