@@ -1,20 +1,3 @@
-"""
-Yassine Kraiem
-WI2024
-Independent Study Final Project
-Flask Guessing Game:
-The app generates a random number between 1 and 20 (inclusive) and asks the user to guess it.
-The user has only 5 guesses. The app should prevent the user from guessing the same number twice
-(“You already guessed that! Give me a new guess.”)
-and display the number of guesses remaining. If the user guesses the number before running out,
-or runs out of guesses before guessing correctly, display a “game over” page that says “You [won/lost]!
-Click here if you’d like to play again.” This should be a template where ‘won’ or ‘lost’ is a parameter.
-And of course, “Click here” should be a hyperlink that takes the user to a new game. The game's "home page" should be /game
-Displaying the number of guesses remaining  as an image like a long green rectangle that gets shorter with each guess
-until it's gone.
-"""
-
-
 import base64
 import random
 from io import BytesIO
